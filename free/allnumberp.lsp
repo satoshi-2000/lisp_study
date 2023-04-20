@@ -1,0 +1,6 @@
+(defun allnumberp (&rest %numbers)
+		(cond ((null %numbers) t)
+			(t (and (numberp (car %numbers)) 
+				(apply #'allnumberp (cdr %numbers))))
+		)
+)

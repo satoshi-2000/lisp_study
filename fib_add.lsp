@@ -1,0 +1,15 @@
+(defun fib_add (%num)
+	(let ((=a0 0)
+		(=a1 1)
+		(=a2 1))
+
+		(cond (( eq 0 %num) =a0)
+			((eq 1 %num) =a1)
+			((eq 2 %num) =a2)
+			(t (+ (fib_add (- %num 1) ) 
+				(fib_add (- %num 2))
+				(fib_add (- %num 3))))
+		)
+	)
+)
+

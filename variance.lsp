@@ -1,0 +1,6 @@
+(defun variance (&rest %numbers)
+	(- (/ (apply #'+ (jijyolist %numbers))
+		(length %numbers))
+		(jijyo (average2 %numbers))
+	)
+)
